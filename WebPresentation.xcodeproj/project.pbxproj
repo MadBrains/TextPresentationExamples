@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,6 +12,9 @@
 		84C125F32355CBEE0030B4A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84C125F12355CBEE0030B4A5 /* Main.storyboard */; };
 		84C125F52355CBF00030B4A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84C125F42355CBF00030B4A5 /* Assets.xcassets */; };
 		84C125F82355CBF00030B4A5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84C125F62355CBF00030B4A5 /* LaunchScreen.storyboard */; };
+		84C126032355D2B20030B4A5 /* DownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C126022355D2B20030B4A5 /* DownViewController.swift */; };
+		84C126052355D4950030B4A5 /* SystemTime+Comparison.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C126042355D4950030B4A5 /* SystemTime+Comparison.swift */; };
+		84C1260C2355D7A90030B4A5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C1260B2355D7A90030B4A5 /* Constants.swift */; };
 		96874F463A0260BEBE20C28B /* Pods_WebPresentation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AE94D7F62271ADD63F96A51 /* Pods_WebPresentation.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +28,9 @@
 		84C125F42355CBF00030B4A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84C125F72355CBF00030B4A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		84C125F92355CBF00030B4A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84C126022355D2B20030B4A5 /* DownViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownViewController.swift; sourceTree = "<group>"; };
+		84C126042355D4950030B4A5 /* SystemTime+Comparison.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SystemTime+Comparison.swift"; sourceTree = "<group>"; };
+		84C1260B2355D7A90030B4A5 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		E7DDF6679CA784726554E36B /* Pods-WebPresentation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebPresentation.release.xcconfig"; path = "Target Support Files/Pods-WebPresentation/Pods-WebPresentation.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -46,7 +52,6 @@
 				08D714C105BAC2702E7FBBE2 /* Pods-WebPresentation.debug.xcconfig */,
 				E7DDF6679CA784726554E36B /* Pods-WebPresentation.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -71,14 +76,65 @@
 		84C125EA2355CBEE0030B4A5 /* WebPresentation */ = {
 			isa = PBXGroup;
 			children = (
-				84C125EB2355CBEE0030B4A5 /* AppDelegate.swift */,
-				84C125EF2355CBEE0030B4A5 /* ViewController.swift */,
-				84C125F12355CBEE0030B4A5 /* Main.storyboard */,
-				84C125F42355CBF00030B4A5 /* Assets.xcassets */,
-				84C125F62355CBF00030B4A5 /* LaunchScreen.storyboard */,
-				84C125F92355CBF00030B4A5 /* Info.plist */,
+				84C126072355D4B20030B4A5 /* Application */,
+				84C126092355D4D40030B4A5 /* Extensions */,
+				84C126082355D4BA0030B4A5 /* Scenes */,
+				84C1260A2355D4E10030B4A5 /* Resources */,
 			);
 			path = WebPresentation;
+			sourceTree = "<group>";
+		};
+		84C125FF2355D2540030B4A5 /* DownViewController */ = {
+			isa = PBXGroup;
+			children = (
+				84C126022355D2B20030B4A5 /* DownViewController.swift */,
+			);
+			path = DownViewController;
+			sourceTree = "<group>";
+		};
+		84C126062355D4A00030B4A5 /* MainViewController */ = {
+			isa = PBXGroup;
+			children = (
+				84C125EF2355CBEE0030B4A5 /* ViewController.swift */,
+			);
+			path = MainViewController;
+			sourceTree = "<group>";
+		};
+		84C126072355D4B20030B4A5 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				84C125EB2355CBEE0030B4A5 /* AppDelegate.swift */,
+				84C1260B2355D7A90030B4A5 /* Constants.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		84C126082355D4BA0030B4A5 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				84C125F62355CBF00030B4A5 /* LaunchScreen.storyboard */,
+				84C125F12355CBEE0030B4A5 /* Main.storyboard */,
+				84C125FF2355D2540030B4A5 /* DownViewController */,
+				84C126062355D4A00030B4A5 /* MainViewController */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		84C126092355D4D40030B4A5 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				84C126042355D4950030B4A5 /* SystemTime+Comparison.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		84C1260A2355D4E10030B4A5 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				84C125F42355CBF00030B4A5 /* Assets.xcassets */,
+				84C125F92355CBF00030B4A5 /* Info.plist */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		B651D0AE1C4530271148332B /* Frameworks */ = {
@@ -204,8 +260,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84C1260C2355D7A90030B4A5 /* Constants.swift in Sources */,
+				84C126052355D4950030B4A5 /* SystemTime+Comparison.swift in Sources */,
 				84C125F02355CBEE0030B4A5 /* ViewController.swift in Sources */,
 				84C125EC2355CBEE0030B4A5 /* AppDelegate.swift in Sources */,
+				84C126032355D2B20030B4A5 /* DownViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -352,7 +411,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UC9BH8UGNG;
-				INFOPLIST_FILE = WebPresentation/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/WebPresentation/Resources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -372,7 +431,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UC9BH8UGNG;
-				INFOPLIST_FILE = WebPresentation/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/WebPresentation/Resources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
