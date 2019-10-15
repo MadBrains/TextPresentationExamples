@@ -15,6 +15,7 @@
 		84C126032355D2B20030B4A5 /* DownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C126022355D2B20030B4A5 /* DownViewController.swift */; };
 		84C126052355D4950030B4A5 /* SystemTime+Comparison.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C126042355D4950030B4A5 /* SystemTime+Comparison.swift */; };
 		84C1260C2355D7A90030B4A5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C1260B2355D7A90030B4A5 /* Constants.swift */; };
+		84C1260F2355D8E00030B4A5 /* MarkdownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C1260E2355D8E00030B4A5 /* MarkdownViewController.swift */; };
 		96874F463A0260BEBE20C28B /* Pods_WebPresentation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AE94D7F62271ADD63F96A51 /* Pods_WebPresentation.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +32,7 @@
 		84C126022355D2B20030B4A5 /* DownViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownViewController.swift; sourceTree = "<group>"; };
 		84C126042355D4950030B4A5 /* SystemTime+Comparison.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SystemTime+Comparison.swift"; sourceTree = "<group>"; };
 		84C1260B2355D7A90030B4A5 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		84C1260E2355D8E00030B4A5 /* MarkdownViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkdownViewController.swift; sourceTree = "<group>"; };
 		E7DDF6679CA784726554E36B /* Pods-WebPresentation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebPresentation.release.xcconfig"; path = "Target Support Files/Pods-WebPresentation/Pods-WebPresentation.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -115,6 +117,7 @@
 				84C125F62355CBF00030B4A5 /* LaunchScreen.storyboard */,
 				84C125F12355CBEE0030B4A5 /* Main.storyboard */,
 				84C125FF2355D2540030B4A5 /* DownViewController */,
+				84C1260D2355D8A40030B4A5 /* MarkdownViewController */,
 				84C126062355D4A00030B4A5 /* MainViewController */,
 			);
 			path = Scenes;
@@ -135,6 +138,14 @@
 				84C125F92355CBF00030B4A5 /* Info.plist */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		84C1260D2355D8A40030B4A5 /* MarkdownViewController */ = {
+			isa = PBXGroup;
+			children = (
+				84C1260E2355D8E00030B4A5 /* MarkdownViewController.swift */,
+			);
+			path = MarkdownViewController;
 			sourceTree = "<group>";
 		};
 		B651D0AE1C4530271148332B /* Frameworks */ = {
@@ -263,6 +274,7 @@
 				84C1260C2355D7A90030B4A5 /* Constants.swift in Sources */,
 				84C126052355D4950030B4A5 /* SystemTime+Comparison.swift in Sources */,
 				84C125F02355CBEE0030B4A5 /* ViewController.swift in Sources */,
+				84C1260F2355D8E00030B4A5 /* MarkdownViewController.swift in Sources */,
 				84C125EC2355CBEE0030B4A5 /* AppDelegate.swift in Sources */,
 				84C126032355D2B20030B4A5 /* DownViewController.swift in Sources */,
 			);

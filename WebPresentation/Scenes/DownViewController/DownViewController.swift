@@ -19,13 +19,16 @@ class DownViewController: UIViewController {
         super.viewDidLoad()
 
         let startTimestamp = mach_absolute_time()
+        
         guard let downView = try? DownView(
             frame: self.view.bounds,
             markdownString: Constants.markdownExample
         ) else {
             return
         }
-        renderingTimeLabel.text = "Rendering time: " + "\(mach_absolute_time().timeIntervalSince(timestamp: startTimestamp))" + " s"
+        
+        let timeDiff = "\(mach_absolute_time().timeIntervalSince(timestamp: startTimestamp))"
+        renderingTimeLabel.text = "Rendering time: " + timeDiff + " s"
         
         markdownViewContainer.addSubview(downView)
         constrain(downView, markdownViewContainer) { downView, view in
