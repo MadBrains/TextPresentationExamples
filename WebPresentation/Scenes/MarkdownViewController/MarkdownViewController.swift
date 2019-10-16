@@ -25,6 +25,7 @@ class MarkdownViewController: UIViewController, MarkdownPresentable {
         let startTimestamp = mach_absolute_time()
         
         let markdownView = MarkdownView()
+        markdownView.onTouchLink = { _ in return true }
         markdownView.load(markdown: markdownExample.text)
         markdownView.onRendered = { [weak self] _ in
             let timeDiff = "\(mach_absolute_time().timeIntervalSince(timestamp: startTimestamp))"
