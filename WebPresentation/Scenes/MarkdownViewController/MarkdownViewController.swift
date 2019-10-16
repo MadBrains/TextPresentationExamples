@@ -10,10 +10,12 @@ import UIKit
 import MarkdownView
 import Cartography
 
-class MarkdownViewController: UIViewController {
+class MarkdownViewController: UIViewController, MarkdownPresentable {
     
     @IBOutlet weak var renderingTimeLabel: UILabel!
     @IBOutlet weak var markdownViewContainer: UIView!
+    
+    var markdownExample = MarkdownExample.short
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +23,7 @@ class MarkdownViewController: UIViewController {
         let startTimestamp = mach_absolute_time()
         
         let markdownView = MarkdownView()
-        markdownView.load(markdown: Constants.markdownExample)
+        markdownView.load(markdown: markdownExample.text)
         markdownView.onRendered = { [weak self] _ in
             let timeDiff = "\(mach_absolute_time().timeIntervalSince(timestamp: startTimestamp))"
             self?.renderingTimeLabel.text = "Rendering time: " + timeDiff + " s"

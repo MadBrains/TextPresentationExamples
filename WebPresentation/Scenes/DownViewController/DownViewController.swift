@@ -10,11 +10,13 @@ import UIKit
 import Down
 import Cartography
 
-class DownViewController: UIViewController {
+class DownViewController: UIViewController, MarkdownPresentable {
     
     @IBOutlet weak var renderingTimeLabel: UILabel!
     @IBOutlet weak var markdownViewContainer: UIView!
 
+    var markdownExample = MarkdownExample.short
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,7 +24,7 @@ class DownViewController: UIViewController {
         
         guard let downView = try? DownView(
             frame: self.view.bounds,
-            markdownString: Constants.markdownExample,
+            markdownString: markdownExample.text,
             options: .smartUnsafe
         ) else {
             return
