@@ -22,7 +22,8 @@ class DownViewController: UIViewController {
         
         guard let downView = try? DownView(
             frame: self.view.bounds,
-            markdownString: Constants.markdownExample
+            markdownString: Constants.markdownExample,
+            options: .smartUnsafe
         ) else {
             return
         }
