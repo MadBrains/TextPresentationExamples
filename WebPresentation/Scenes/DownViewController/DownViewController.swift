@@ -19,6 +19,8 @@ class DownViewController: UIViewController, MarkdownPresentable {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        title = "Down"
 
         let startTimestamp = mach_absolute_time()
         

@@ -8,47 +8,98 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WebPresentation" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="WebPresentation" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EnZ-TX-5nF">
-                                <rect key="frame" x="25" y="138" width="364" height="50"/>
+                                <rect key="frame" x="25" y="188" width="169.5" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="pds-7o-E51"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="Down"/>
+                                <state key="normal" title="Short"/>
                                 <connections>
-                                    <segue destination="FOI-3D-rH9" kind="show" id="CJU-am-XNZ"/>
+                                    <segue destination="FOI-3D-rH9" kind="show" identifier="downShort" id="CJU-am-XNZ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ude-zj-9lj">
-                                <rect key="frame" x="25" y="238" width="364" height="50"/>
+                                <rect key="frame" x="25" y="338" width="169.5" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="aKY-2f-6FK"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="MarkdownView"/>
+                                <state key="normal" title="Short"/>
                                 <connections>
-                                    <segue destination="afb-Rn-St9" kind="show" id="hAw-e0-UbT"/>
+                                    <segue destination="afb-Rn-St9" kind="show" identifier="markdownShort" id="hAw-e0-UbT"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HRf-mc-mpG">
+                                <rect key="frame" x="219.5" y="188" width="169.5" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Yod-qe-T5y"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Long"/>
+                                <connections>
+                                    <segue destination="FOI-3D-rH9" kind="show" identifier="downLong" id="P7B-qU-qA7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sm4-0Q-Jm2">
+                                <rect key="frame" x="219.5" y="338" width="169.5" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="lkn-8a-MTZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Long"/>
+                                <connections>
+                                    <segue destination="afb-Rn-St9" kind="show" identifier="markdownLong" id="3PU-EQ-o2o"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Down (CommonMark)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wwx-Tr-wKd">
+                                <rect key="frame" x="25" y="113" width="364" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="DUN-uo-lUD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MarkdownView (Markdown)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N39-TU-rGO">
+                                <rect key="frame" x="25" y="263" width="364" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="xfF-ZK-pgm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="HRf-mc-mpG" firstAttribute="width" secondItem="EnZ-TX-5nF" secondAttribute="width" id="1Ah-JU-1vU"/>
+                            <constraint firstItem="N39-TU-rGO" firstAttribute="top" secondItem="HRf-mc-mpG" secondAttribute="bottom" constant="25" id="2si-Bg-uQP"/>
+                            <constraint firstItem="EnZ-TX-5nF" firstAttribute="top" secondItem="wwx-Tr-wKd" secondAttribute="bottom" constant="25" id="2zu-q0-zTb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="HRf-mc-mpG" secondAttribute="trailing" constant="25" id="6kd-lc-UzG"/>
                             <constraint firstItem="EnZ-TX-5nF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="HUi-ih-nCE"/>
-                            <constraint firstItem="Ude-zj-9lj" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="JBT-9R-lu8"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EnZ-TX-5nF" secondAttribute="trailing" constant="25" id="VCA-63-raD"/>
-                            <constraint firstItem="EnZ-TX-5nF" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="brF-AS-v0b"/>
-                            <constraint firstItem="Ude-zj-9lj" firstAttribute="top" secondItem="EnZ-TX-5nF" secondAttribute="bottom" constant="50" id="mHd-ul-IcK"/>
+                            <constraint firstItem="Ude-zj-9lj" firstAttribute="top" secondItem="N39-TU-rGO" secondAttribute="bottom" constant="25" id="K3w-Mg-514"/>
+                            <constraint firstItem="HRf-mc-mpG" firstAttribute="leading" secondItem="EnZ-TX-5nF" secondAttribute="trailing" constant="25" id="Kpf-le-WjQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wwx-Tr-wKd" secondAttribute="trailing" constant="25" id="RLr-fb-tCc"/>
+                            <constraint firstItem="sm4-0Q-Jm2" firstAttribute="width" secondItem="Ude-zj-9lj" secondAttribute="width" id="ZaI-4A-gw1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="N39-TU-rGO" secondAttribute="trailing" constant="25" id="a8g-aC-GND"/>
+                            <constraint firstItem="wwx-Tr-wKd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="doG-Oz-TLd"/>
+                            <constraint firstItem="sm4-0Q-Jm2" firstAttribute="top" secondItem="N39-TU-rGO" secondAttribute="bottom" constant="25" id="ggh-XG-Eqt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sm4-0Q-Jm2" secondAttribute="trailing" constant="25" id="gyJ-lE-18l"/>
+                            <constraint firstItem="sm4-0Q-Jm2" firstAttribute="leading" secondItem="Ude-zj-9lj" secondAttribute="trailing" constant="25" id="kUi-bG-ji1"/>
+                            <constraint firstItem="N39-TU-rGO" firstAttribute="top" secondItem="EnZ-TX-5nF" secondAttribute="bottom" constant="25" id="qyU-Sa-Mbs"/>
+                            <constraint firstItem="N39-TU-rGO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="saW-5N-YDy"/>
                             <constraint firstItem="Ude-zj-9lj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="sgc-cm-ifJ"/>
-                            <constraint firstItem="EnZ-TX-5nF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="tuu-mU-Hcd"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ude-zj-9lj" secondAttribute="trailing" constant="25" id="zpt-vl-ALq"/>
+                            <constraint firstItem="HRf-mc-mpG" firstAttribute="top" secondItem="wwx-Tr-wKd" secondAttribute="bottom" constant="25" id="ufE-SV-Dn7"/>
+                            <constraint firstItem="wwx-Tr-wKd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="25" id="zEU-ew-8uE"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -56,7 +107,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="772" y="771"/>
+            <point key="canvasLocation" x="771.01449275362324" y="770.75892857142856"/>
         </scene>
         <!--Markdown View Controller-->
         <scene sceneID="F1U-zX-8xq">
@@ -163,4 +214,8 @@
             <point key="canvasLocation" x="-91" y="772"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="P7B-qU-qA7"/>
+        <segue reference="3PU-EQ-o2o"/>
+    </inferredMetricsTieBreakers>
 </document>

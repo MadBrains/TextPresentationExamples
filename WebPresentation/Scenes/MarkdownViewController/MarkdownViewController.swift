@@ -19,6 +19,8 @@ class MarkdownViewController: UIViewController, MarkdownPresentable {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        title = "MarkdownView"
 
         let startTimestamp = mach_absolute_time()
         
