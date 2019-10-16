@@ -5,7 +5,7 @@ PODS:
 
 DEPENDENCIES:
   - Cartography
-  - Down (from `https://github.com/MadBrains/Down.git`, tag `0.9.1`)
+  - Down (from `https://github.com/MadBrains/Down.git`, tag `0.9.2`)
   - MarkdownView (from `https://github.com/MadBrains/MarkdownView.git`)
 
 SPEC REPOS:
@@ -15,14 +15,14 @@ SPEC REPOS:
 EXTERNAL SOURCES:
   Down:
     :git: https://github.com/MadBrains/Down.git
-    :tag: 0.9.1
+    :tag: 0.9.2
   MarkdownView:
     :git: https://github.com/MadBrains/MarkdownView.git
 
 CHECKOUT OPTIONS:
   Down:
     :git: https://github.com/MadBrains/Down.git
-    :tag: 0.9.1
+    :tag: 0.9.2
   MarkdownView:
     :commit: 078b61492b44807b8d95b4d31d24f955605203bf
     :git: https://github.com/MadBrains/MarkdownView.git
@@ -32,6 +32,6 @@ SPEC CHECKSUMS:
   Down: 1cdbca4963b542d0ef34ebb3e10ff48382bdf761
   MarkdownView: c33e758593d4bfadf37a7d00d2b26d8fd70134e0
 
-PODFILE CHECKSUM: ac4b4c0299292bb154d41bd161dd26c1fec45927
+PODFILE CHECKSUM: 663f953f6d1dbe09b7ee8a2471cdb48354b27907
 
 COCOAPODS: 1.8.0
